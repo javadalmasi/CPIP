@@ -80,4 +80,9 @@ export default defineConfig({
         sourcemap: true,
         cssMinify: "lightningcss",
     },
+    server: {
+        allowedHosts: [
+          'cpip.seevid.ir'
+        ]
+    }
 });
