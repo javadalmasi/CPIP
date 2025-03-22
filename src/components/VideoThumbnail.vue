@@ -3,7 +3,7 @@
         <img
             loading="lazy"
             class="aspect-video w-full rounded-md object-contain"
-            :src="item.thumbnail"
+            :src="'https://static.seevid.net/vi/' + item.url.substr(-11) + '?resize=640,360&quality=85'"
             :alt="item.title"
             :class="{ 'shorts-img': item.isShort, 'opacity-75': item.watched }"
         />
