@@ -1,21 +1,21 @@
 <template>
     <nav class="relative w-full flex flex-wrap items-center justify-center px-2 pb-2.5 sm:px-4">
         <div class="flex flex-1 justify-start">
-            <router-link class="flex items-center text-3xl font-bold font-sans" :to="homePagePath"
+            <router-link class="flex items-center" :to="homePagePath"
                 ><img
                     alt="logo"
-                    src="/img/icons/logo.svg"
-                    height="32"
-                    width="32"
-                    class="mr-[-0.6rem] w-10"
-                />iped</router-link
+                    src="/img/icons/logo.png"
+                    height="64"
+                    width="64"
+                    class="pl-[-0.8rem] w-20"
+                />.</router-link
             >
         </div>
         <div class="search-container lt-md:hidden">
             <input
                 ref="videoSearch"
                 v-model="searchText"
-                class="input h-10 w-72 pr-20"
+                class="input h-10 w-72"
                 type="text"
                 role="search"
                 :title="$t('actions.search')"
@@ -227,7 +227,7 @@ export default {
     @apply relative inline-flex items-center;
 }
 .delete-search {
-    @apply absolute right-3 cursor-pointer rounded-full bg-[#ccc] w-4 h-4 text-center text-black opacity-50 hover:(opacity-70) text-size-[10px];
+    @apply absolute left-3 cursor-pointer rounded-full bg-[#ccc] w-4 h-4 text-center text-black opacity-50 hover:(opacity-70) text-size-[10px];
 }
 .mobile-nav div {
     @apply mx-1;

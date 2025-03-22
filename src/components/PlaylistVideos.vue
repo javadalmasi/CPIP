@@ -49,7 +49,7 @@
                             :title="related.uploaderName"
                         >
                             <span v-text="related.uploaderName" />
-                            <i v-if="related.uploaderVerified" class="i-fa6-solid:check ml-1.5" />
+                            <i v-if="related.uploaderVerified" class="i-fa6-solid:check mr-1.5" />
                         </router-link>
                     </div>
                 </div>

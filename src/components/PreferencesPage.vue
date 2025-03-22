@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
         <button @click="$router.go(-1) || $router.push('/')">
-            <i class="i-fa6-solid:chevron-left" /><span v-t="'actions.back'" class="ml-1.5" />
+            <i class="i-fa6-solid:chevron-left" /><span v-t="'actions.back'" class="mr-1.5" />
         </button>
     </div>
     <h1 v-t="'titles.preferences'" class="text-center font-bold" />
@@ -405,7 +405,7 @@
 </template>
 
 <script>
-import CountryMap from "@/utils/CountryMaps/en.json";
+import CountryMap from "@/utils/CountryMaps/fa.json";
 import ConfirmModal from "./ConfirmModal.vue";
 import CustomInstanceModal from "./CustomInstanceModal.vue";
 export default {
@@ -459,55 +459,8 @@ export default {
             hideWatched: false,
             selectedLanguage: "en",
             languages: [
-                { code: "ar", name: "Arabic" },
-                { code: "az", name: "Azərbaycan" },
-                { code: "bg", name: "Български" },
-                { code: "bn", name: "বাংলা" },
-                { code: "bs", name: "Bosanski" },
-                { code: "ca", name: "Català" },
-                { code: "cs", name: "Čeština" },
-                { code: "da", name: "Dansk" },
-                { code: "de", name: "Deutsch" },
-                { code: "el", name: "Ελληνικά" },
-                { code: "es", name: "Español" },
                 { code: "en", name: "English" },
-                { code: "eo", name: "Esperanto" },
-                { code: "et", name: "Eesti" },
                 { code: "fa", name: "فارسی" },
-                { code: "fi", name: "Suomi" },
-                { code: "fr", name: "Français" },
-                { code: "he", name: "עברית" },
-                { code: "hi", name: "हिंदी" },
-                { code: "id", name: "Indonesia" },
-                { code: "is", name: "Íslenska" },
-                { code: "kab", name: "Taqbaylit" },
-                { code: "hr", name: "Hrvatski" },
-                { code: "it", name: "Italiano" },
-                { code: "ja", name: "日本語" },
-                { code: "ko", name: "한국어" },
-                { code: "lt", name: "Lietuvių kalba" },
-                { code: "ml", name: "മലയാളം" },
-                { code: "nb_NO", name: "Norwegian Bokmål" },
-                { code: "nl", name: "Nederlands" },
-                { code: "oc", name: "Occitan" },
-                { code: "or", name: "ଓଡ଼ିଆ" },
-                { code: "pl", name: "Polski" },
-                { code: "pt", name: "Português" },
-                { code: "pt_PT", name: "Português (Portugal)" },
-                { code: "pt_BR", name: "Português (Brasil)" },
-                { code: "ro", name: "Română" },
-                { code: "ru", name: "Русский" },
-                { code: "si", name: "සිංහල" },
-                { code: "sl", name: "Slovenian" },
-                { code: "sr", name: "Српски" },
-                { code: "sv", name: "Svenska" },
-                { code: "ta", name: "தமிழ்" },
-                { code: "th", name: "ไทย" },
-                { code: "tr", name: "Türkçe" },
-                { code: "uk", name: "Українська" },
-                { code: "vi", name: "Tiếng Việt" },
-                { code: "zh_Hant", name: "繁體中文" },
-                { code: "zh_Hans", name: "简体中文" },
             ],
             enabledCodecs: ["vp9", "avc"],
             disableLBRY: false,

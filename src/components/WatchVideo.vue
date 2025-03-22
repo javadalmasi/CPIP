@@ -44,7 +44,7 @@
                                 "
                             >
                                 <div
-                                    :class="theaterMode ? 'i-fa6-solid:chevron-left' : 'i-fa6-solid:chevron-right'"
+                                    :class="theaterMode ? 'i-fa6-solid:chevron-right' : 'i-fa6-solid:chevron-left'"
                                 ></div>
                             </button>
                         </div>
@@ -79,12 +79,12 @@
                             <template v-if="video.likes >= 0">
                                 <div class="flex items-center">
                                     <div class="i-fa6-solid:thumbs-up" />
-                                    <strong class="ml-1" v-text="addCommas(video.likes)" />
+                                    <strong class="mr-1" v-text="addCommas(video.likes)" />
                                 </div>
                                 <div class="flex items-center">
                                     <div class="i-fa6-solid:thumbs-down" />
                                     <strong
-                                        class="ml-1"
+                                        class="mr-1"
                                         v-text="video.dislikes >= 0 ? addCommas(video.dislikes) : '?'"
                                     />
                                 </div>
@@ -108,11 +108,11 @@
                                 alt=""
                                 class="rounded-full"
                             />
-                            <router-link v-if="video.uploaderUrl" class="link ml-1.5" :to="video.uploaderUrl">{{
+                            <router-link v-if="video.uploaderUrl" class="link mr-1.5" :to="video.uploaderUrl">{{
                                 video.uploader
                             }}</router-link>
                             <!-- Verified Badge -->
-                            <i v-if="video.uploaderVerified" class="i-fa6-solid:check ml-1" />
+                            <i v-if="video.uploaderVerified" class="i-fa6-solid:check mr-1" />
                         </div>
                         <PlaylistAddModal
                             v-if="showModal"
@@ -130,11 +130,11 @@
                         />
                         <div class="ml-auto flex flex-wrap gap-1">
                             <!-- Subscribe Button -->
-                            <button class="btn flex items-center gap-1 <md:hidden" @click="downloadCurrentFrame">
+                            <!-- <button class="btn flex items-center gap-1 <md:hidden" @click="downloadCurrentFrame">
                                 {{ $t("actions.download_frame") }}<i class="i-fa6-solid:download" />
-                            </button>
+                            </button> -->
                             <button class="btn flex items-center" @click="showModal = !showModal">
-                                {{ $t("actions.add_to_playlist") }}<i class="i-fa6-solid:circle-plus ml-1" />
+                                {{ $t("actions.add_to_playlist") }}<i class="i-fa6-solid:circle-plus mr-1" />
                             </button>
                             <button
                                 class="btn"
@@ -147,7 +147,7 @@
                             />
                             <div class="flex flex-wrap gap-1">
                                 <!-- RSS Feed button -->
-                                <a
+                                <!-- <a
                                     v-if="video.uploaderUrl"
                                     aria-label="RSS feed"
                                     title="RSS feed"
@@ -157,7 +157,7 @@
                                     class="btn flex items-center"
                                 >
                                     <i class="i-fa6-solid:rss mx-1.5" />
-                                </a>
+                                </a> -->
                                 <!-- Share Dialog -->
                                 <button class="btn flex items-center" @click="showShareModal = !showShareModal">
                                     <i18n-t class="lt-lg:hidden" keypath="actions.share" tag="strong"></i18n-t>
@@ -243,13 +243,13 @@
                 <input
                     id="chkAutoLoop"
                     v-model="selectedAutoLoop"
-                    class="ml-1.5"
+                    class="mr-1.5"
                     type="checkbox"
                     @change="onChange($event)"
                 />
                 <br />
                 <label for="chkAutoPlay"><strong v-text="`${$t('actions.auto_play_next_video')}:`" /></label>
-                <select id="chkAutoPlay" v-model="selectedAutoPlay" class="select ml-1.5" @change="onChange($event)">
+                <select id="chkAutoPlay" v-model="selectedAutoPlay" class="select mr-1.5" @change="onChange($event)">
                     <option v-t="'actions.never'" value="0" />
                     <option v-t="'actions.playlists_only'" value="1" />
                     <option v-t="'actions.always'" value="2" />
@@ -326,7 +326,7 @@
                 />
                 <a
                     v-t="`actions.${showRecs ? 'minimize_recommendations' : 'show_recommendations'}`"
-                    class="btn mb-2"
+                    class="btn mb-2 mt-2"
                     @click="showRecs = !showRecs"
                 />
                 <hr v-show="showRecs" />

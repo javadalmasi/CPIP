@@ -100,5 +100,6 @@ export default {
 
 .suggestion {
     @apply block w-full p-1;
+    text-align: right;
 }
 </style>

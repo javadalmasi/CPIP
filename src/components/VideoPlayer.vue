@@ -912,7 +912,8 @@ export default {
 }
 
 .player-container {
-    @apply max-h-75vh min-h-64 bg-black;
+    @apply max-h92vh min-h-64 bg-black;
+    direction: ltr;
 }
 
 .shaka-video-container .material-icons-round {
