@@ -334,19 +334,8 @@ export default {
                 MseSupport &&
                 !this.getPreferenceBoolean("preferHls", false)
             ) {
-                if (!this.video.dash) {
-                    const dash = (await import("../utils/DashUtils.js")).generate_dash_file_from_formats(
-                        streams,
-                        this.video.duration,
-                    );
-
-                    uri = "data:application/dash+xml;charset=utf-8;base64," + btoa(dash);
-                } else {
-                    const url = new URL(this.video.dash);
-                    url.searchParams.set("rewrite", false);
-                    uri = url.toString();
-                }
-                mime = "application/dash+xml";
+                uri = this.video.videoStreams.findLast(stream => stream.codec == null).url;
+                mime = "video/mp4";
             } else if (lbry) {
                 uri = lbry.url;
                 if (this.getPreferenceBoolean("proxyLBRY", false)) {
@@ -373,9 +362,6 @@ export default {
             } else if (this.video.hls) {
                 uri = this.video.hls;
                 mime = "application/x-mpegURL";
-            } else {
-                uri = this.video.videoStreams.findLast(stream => stream.codec == null).url;
-                mime = "video/mp4";
             }
 
             if (noPrevPlayer)
