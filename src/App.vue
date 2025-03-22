@@ -9,20 +9,20 @@
             </router-view>
         </div>
 
-        <FooterComponent />
+        <!-- <FooterComponent /> -->
     </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import FooterComponent from "./components/FooterComponent.vue";
+// import FooterComponent from "./components/FooterComponent.vue";
 
 const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
 
 export default {
     components: {
         NavBar,
-        FooterComponent,
+        // FooterComponent,
     },
     data() {
         return {
@@ -137,12 +137,15 @@ export default {
 </script>
 
 <style>
+body {
+    direction: rtl;
+}
 h1,
 p,
 a,
 b {
     unicode-bidi: plaintext;
-    text-align: start;
+    text-align: end;
 }
 
 :root {
