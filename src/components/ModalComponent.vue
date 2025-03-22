@@ -53,6 +53,6 @@ export default {
 }
 
 .modal-container > button {
-    @apply absolute right-2.5 top-1;
+    @apply absolute left-2.5 top-1;
 }
 </style>
