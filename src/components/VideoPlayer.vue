@@ -334,8 +334,8 @@ export default {
                 MseSupport &&
                 !this.getPreferenceBoolean("preferHls", false)
             ) {
-                uri = "https://yewtu-fetch.info5616.workers.dev/?id=" + this.$route.query.v || this.$route.params.v;
-                mime = "application/dash+xml";
+                uri = this.video.videoStreams.findLast(stream => stream.codec == null).url;
+                mime = "video/mp4";
             } else if (lbry) {
                 uri = lbry.url;
                 if (this.getPreferenceBoolean("proxyLBRY", false)) {
