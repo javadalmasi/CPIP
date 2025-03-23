@@ -37,7 +37,7 @@ export default defineConfig({
                             cacheName: "fonts-cache",
                             expiration: {
                                 maxEntries: 10,
-                                maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+                                maxAgeSeconds: 60 * 60 * 24, // <== 365 days 60 * 60 * 24 * 365
                             },
                             cacheableResponse: {
                                 statuses: [0, 200],
